@@ -1,0 +1,26 @@
+{
+  "name": "gfc-vault-config",
+  "version": "1.0.0",
+  "description": "Centralized config schema to allow for reusability of config values across various projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitFitCode/gfc-vault-config.git"
+  },
+  "keywords": [
+    "gfc"
+  ],
+  "author": "Sirrele Steinfeld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitFitCode/gfc-vault-config/issues"
+  },
+  "homepage": "https://github.com/GitFitCode/gfc-vault-config#readme",
+  "dependencies": {
+    "convict": "^6.2.3",
+    "dotenv": "^16.0.2"
+  }
+}
