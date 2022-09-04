@@ -33,7 +33,7 @@ In order to be able to install the repository you will need to generate a person
 When you trigger the following command within your terminal in VSCode you will get a prompt asking for a password. You will need to provide the token that you recently generated. After, you will see the library start downloading.
 
 
-#### Using the vault-config module within code
+#### Using the gfc-vault-config module within code
 
 Lets say we have an`index.js` file that we wanted to access the config in. All we would do is import the config using with one of the following:
 
