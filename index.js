@@ -86,6 +86,12 @@ const config = convict({
         arg: 'notionDatabaseLink',
         env: 'NOTION_DATABASE_LINK'
     },
+    githubPersonalAccessToken: {
+        format: String,
+        default: 'from default',
+        arg: 'githubPersonalAccessToken',
+        env: 'GITHUB_PERSON_ACCESS_TOKEN'
+    },
     limitMaxConcurrent: {
         format: Number,
         default: 'from default',

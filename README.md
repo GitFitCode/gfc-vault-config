@@ -22,7 +22,7 @@ You should have an `.env` file with all of your projects secrets and keys. Ultim
 
 #### Installing `gfc-vault-config` in an existing project via npm using the following commands
 
-*Within the repository you would like to use it in, plase run either of the following based on your project:*
+*Within the repository you would like to use it in, please run either of the following based on your project:*
 
  `npm install git+https://git@github.com/GitFitCode/gfc-vault-config.git`
  
@@ -30,7 +30,7 @@ You should have an `.env` file with all of your projects secrets and keys. Ultim
  
 In order to be able to install the repository you will need to generate a personal token within github. This will need to be stored in your `.env` file so you can reference it later.
 
-When you trigger the following command within your terminal in VSCode you will get a prompt asking for a password. You will need to provide the token that you recently generated. After, you will see the library start downloading.
+When you trigger the following command within your terminal in VSCode you will get a prompt asking for a password. You will need to provide the [token](https://github.com/settings/tokens) that you recently generated. After, you will see the library start downloading.
 
 
 #### Using the gfc-vault-config module within code
