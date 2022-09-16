@@ -8,23 +8,23 @@ const config = convict({
         arg: 'nodeEnv',
         env: 'NODE_ENV'
     },
-    discordClientId: {
+    discordBotToken: {
         format: String,
         default: 'from default',
-        arg: 'discordClientId',
-        env: 'CLIENT_ID'
+        arg: 'discordBotToken',
+        env: 'DISCORD_BOT_TOKEN'
     },
-    discordGuildtId: {
+    botId: {
         format: String,
         default: 'from default',
-        arg: 'discordGuildtId',
-        env: 'GUILD_ID'
+        arg: 'botId',
+        env: 'BOT_ID'
     },
-    discordToken: {
+    gfcIntroSurveyLink: {
         format: String,
         default: 'from default',
-        arg: 'discordToken',
-        env: 'TOKEN'
+        arg: 'gfcIntroSurveyLink',
+        env: 'GFC_INTRO_SURVEY_LINK'
     },
     discordBotCmdChannelId: {
         format: String,
@@ -32,17 +32,59 @@ const config = convict({
         arg: 'discordBotCmdChannelId',
         env: 'BOT_COMMANDS_CHANNEL_ID'
     },
-    notionToken: {
+    admin1DiscordId: {
         format: String,
         default: 'from default',
-        arg: 'notionToken',
-        env: 'NOTION_TOKEN'
+        arg: 'admin1DiscordId',
+        env: 'ADMIN_1_DISCORD_ID'
     },
-    gfcRetrosByMonthNotionDbId: {
+    admin2DiscordId: {
         format: String,
         default: 'from default',
-        arg: 'gfcRetrosByMonthNotionDbId',
-        env: 'GFC_RETROS_BY_MONTH_NOTION_DB_ID'
+        arg: 'admin2DiscordId',
+        env: 'ADMIN_2_DISCORD_ID'
+    },
+    generalChatChannelId: {
+        format: String,
+        default: 'from default',
+        arg: 'generalChatChannelId',
+        env: 'GENERAL_CHAT_CHANNEL_ID'
+    },
+    checkinsVoiceChannelId: {
+        format: String,
+        default: 'from default',
+        arg: 'checkinsVoiceChannelId',
+        env: 'CHECKINS_VOICE_CHANNEL_ID'
+    },
+    firstRespondersRoleId: {
+        format: String,
+        default: 'from default',
+        arg: 'firstRespondersRoleId',
+        env: 'FIRST_RESPONDERS_ROLE_ID'
+    },
+    notionKey: {
+        format: String,
+        default: 'from default',
+        arg: 'notionKey',
+        env: 'NOTION_KEY'
+    },
+    notionDatabaseId: {
+        format: String,
+        default: 'from default',
+        arg: 'notionDatabaseId',
+        env: 'NOTION_DATABASE_ID'
+    },
+    notionDatabaseStatusId: {
+        format: String,
+        default: 'from default',
+        arg: 'notionDatabaseStatusId',
+        env: 'NOTION_DATABASE_STATUS_ID'
+    },
+    notionDatabaseLink: {
+        format: String,
+        default: 'from default',
+        arg: 'notionDatabaseLink',
+        env: 'NOTION_DATABASE_LINK'
     },
     limitMaxConcurrent: {
         format: Number,
@@ -62,10 +104,10 @@ const config = convict({
         arg: 'port',
         env: 'PORT'
     }
-})
+});
 // Lets ensure we are respecting our config schema
 config.validate({
     allowed: 'strict'
-})
+});
 // convict object has a lot going on so lets just get a simple js object instead
 module.exports = config.getProperties();
