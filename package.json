@@ -4,7 +4,8 @@
   "description": "Centralized config schema to allow for reusability of config values across various projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "ts-node index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,21 @@
   },
   "homepage": "https://github.com/GitFitCode/gfc-vault-config#readme",
   "dependencies": {
-    "convict": "^6.2.3",
-    "dotenv": "^16.0.2"
+    "convict": "latest",
+    "dotenv": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-config-airbnb-typescript": "latest",
+    "husky": "latest",
+    "ts-node": "latest",
+    "tslib": "latest",
+    "typescript": "latest"
   }
 }
