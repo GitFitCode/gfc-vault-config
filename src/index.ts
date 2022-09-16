@@ -1,5 +1,4 @@
 const convict = require('convict');
-
 require('dotenv').config();
 
 const config = convict({
@@ -112,9 +111,11 @@ const config = convict({
     env: 'PORT',
   },
 });
-// Lets ensure we are respecting our config schema
+
+// Lets ensure we are respecting our config schema.
 config.validate({
   allowed: 'strict',
 });
-// convict object has a lot going on so lets just get a simple js object instead
+
+// Convict object has a lot going on so lets just get a simple js object instead.
 module.exports = config.getProperties();

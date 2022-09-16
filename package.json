@@ -1,26 +1,22 @@
 {
   "name": "gfc-vault-config",
   "version": "1.0.0",
-  "description": "Centralized config schema to allow for reusability of config values across various projects",
+  "description": "Centralized config schema to allow for reusability of config values across various GFC projects.",
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "release": "release-it",
+    "release-dry": "release-it --dry-run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GitFitCode/gfc-vault-config.git"
   },
-  "keywords": [
-    "gfc"
-  ],
-  "author": "Sirrele Steinfeld",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GitFitCode/gfc-vault-config/issues"
-  },
+  "author": "GitFitCode",
+  "license": "GNU GPLv3",
   "homepage": "https://github.com/GitFitCode/gfc-vault-config#readme",
   "dependencies": {
     "convict": "latest",
@@ -29,6 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@release-it/conventional-changelog": "latest",
     "@types/convict": "latest",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
@@ -37,6 +34,7 @@
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
     "husky": "latest",
+    "release-it": "latest",
     "ts-node": "latest",
     "tslib": "latest",
     "typescript": "latest"
