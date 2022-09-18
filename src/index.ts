@@ -26,12 +26,6 @@ const config = convict({
     arg: 'gfcIntroSurveyLink',
     env: 'GFC_INTRO_SURVEY_LINK',
   },
-  discordBotCmdChannelId: {
-    format: String,
-    default: 'from default',
-    arg: 'discordBotCmdChannelId',
-    env: 'BOT_COMMANDS_CHANNEL_ID',
-  },
   admin1DiscordId: {
     format: String,
     default: 'from default',
@@ -56,6 +50,12 @@ const config = convict({
     arg: 'checkinsVoiceChannelId',
     env: 'CHECKINS_VOICE_CHANNEL_ID',
   },
+  virtualOfficeVoiceChannelId: {
+    format: String,
+    default: 'from default',
+    arg: 'virtualOfficeVoiceChannelId',
+    env: 'VIRTUAL_OFFICE_VOICE_CHANNEL_ID',
+  },
   firstRespondersRoleId: {
     format: String,
     default: 'from default',
@@ -68,23 +68,23 @@ const config = convict({
     arg: 'notionKey',
     env: 'NOTION_KEY',
   },
-  notionDatabaseId: {
+  notionSupportTicketsDatabaseId: {
     format: String,
     default: 'from default',
-    arg: 'notionDatabaseId',
-    env: 'NOTION_DATABASE_ID',
+    arg: 'notionSupportTicketsDatabaseId',
+    env: 'NOTION_SUPPORT_TICKETS_DATABASE_ID',
   },
-  notionDatabaseStatusId: {
+  notionSupportTicketsDatabaseStatusId: {
     format: String,
     default: 'from default',
-    arg: 'notionDatabaseStatusId',
-    env: 'NOTION_DATABASE_STATUS_ID',
+    arg: 'notionSupportTicketsDatabaseStatusId',
+    env: 'NOTION_SUPPORT_TICKETS_DATABASE_STATUS_ID',
   },
-  notionDatabaseLink: {
+  notionSupportTicketsDatabaseLink: {
     format: String,
     default: 'from default',
-    arg: 'notionDatabaseLink',
-    env: 'NOTION_DATABASE_LINK',
+    arg: 'notionSupportTicketsDatabaseLink',
+    env: 'NOTION_SUPPORT_TICKETS_DATABASE_LINK',
   },
   githubPersonalAccessToken: {
     format: String,
