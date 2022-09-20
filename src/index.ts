@@ -110,6 +110,12 @@ const config = convict({
     arg: 'port',
     env: 'PORT',
   },
+  discordServerID: {
+    format: String,
+    default: 'from default',
+    arg: 'discordServerID',
+    env: 'DISCORD_SERVER_ID',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
