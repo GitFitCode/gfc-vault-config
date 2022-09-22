@@ -116,6 +116,12 @@ const config = convict({
     arg: 'discordServerID',
     env: 'DISCORD_SERVER_ID',
   },
+  notionRetroDatabaseId: {
+    format: String,
+    default: 'from default',
+    arg: 'notionRetroDatabaseId',
+    env: 'NOTION_RETRO_DATABASE_ID',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
