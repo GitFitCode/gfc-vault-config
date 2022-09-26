@@ -122,6 +122,12 @@ const config = convict({
     arg: 'notionRetroDatabaseId',
     env: 'NOTION_RETRO_DATABASE_ID',
   },
+  sentryDSN: {
+    format: String,
+    default: 'from default',
+    arg: 'sentryDSN',
+    env: 'SENTRY_DSN',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
