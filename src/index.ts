@@ -128,6 +128,12 @@ const config = convict({
     arg: 'sentryDSN',
     env: 'SENTRY_DSN',
   },
+  adminRoleID: {
+    format: String,
+    default: 'from default',
+    arg: 'adminRoleID',
+    env: 'ADMIN_ROLE_ID',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
