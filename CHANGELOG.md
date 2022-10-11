@@ -1,5 +1,12 @@
 
 
+# [1.3.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.2.0...v1.3.0) (2022-10-11)
+
+
+### Features
+
+* added `notionBacklogDatabaseLink` ([c36d281](https://github.com/GitFitCode/gfc-vault-config/commit/c36d2815d6679ec61bb910fdd346bfaa7bc510ee))
+
 # [1.2.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.1.0...v1.2.0) (2022-10-11)
 
 
