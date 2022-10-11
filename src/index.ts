@@ -140,6 +140,12 @@ const config = convict({
     arg: 'notionBacklogDatabaseId',
     env: 'NOTION_BACKLOG_DATABASE_ID',
   },
+  notionBacklogDatabaseLink: {
+    format: String,
+    default: 'from default',
+    arg: 'notionBacklogDatabaseLink',
+    env: 'NOTION_BACKLOG_DATABASE_LINK',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
