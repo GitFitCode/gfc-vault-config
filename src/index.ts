@@ -134,6 +134,12 @@ const config = convict({
     arg: 'adminRoleID',
     env: 'ADMIN_ROLE_ID',
   },
+  notionBacklogDatabaseId: {
+    format: String,
+    default: 'from default',
+    arg: 'notionBacklogDatabaseId',
+    env: 'NOTION_BACKLOG_DATABASE_ID',
+  },
 });
 
 // Lets ensure we are respecting our config schema.
