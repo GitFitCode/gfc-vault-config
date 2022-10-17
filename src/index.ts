@@ -1,7 +1,156 @@
 const convict = require('convict');
 require('dotenv').config();
 
-const config = convict({
+interface ConfigSchema {
+  validate: ({ allowed }: { allowed: 'strict' | 'warn' | 'none' }) => void;
+  getProperties: () => void;
+  env: {
+    format: string[] | string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  discordBotToken: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  botId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  gfcIntroSurveyLink: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  admin1DiscordId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  admin2DiscordId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  generalChatChannelId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  checkinsVoiceChannelId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  virtualOfficeVoiceChannelId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  firstRespondersRoleId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionKey: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionSupportTicketsDatabaseId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionSupportTicketsDatabaseStatusId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionSupportTicketsDatabaseLink: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  githubPersonalAccessToken: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  limitMaxConcurrent: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  logLevel: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  port: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  discordServerID: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionRetroDatabaseId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  sentryDSN: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  adminRoleID: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionBacklogDatabaseId: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  notionBacklogDatabaseLink: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+}
+
+const config: ConfigSchema = convict({
   env: {
     format: ['prod', 'dev', 'staging', 'qa', 'local', 'ci'],
     default: 'dev',
