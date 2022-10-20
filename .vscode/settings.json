@@ -2,7 +2,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
-  "files.autoSave": "off",
+  "files.autoSave": "afterDelay",
   "prettier.requireConfig": true,
   "prettier.configPath": "./.prettierrc"
 }

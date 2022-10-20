@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"/","sources":["index.ts"],"names":[],"mappings":";;AAAA,qCAA2D;AAE3D,MAAM,MAAM,GAAW,eAAa,CAAC;AAErC,MAAM,CAAC,OAAO,GAAG,EAAE,MAAM,EAAE,CAAC","sourcesContent":["import { Config, config as configuration } from './config';\n\nconst config: Config = configuration;\n\nmodule.exports = { config };\n"]}

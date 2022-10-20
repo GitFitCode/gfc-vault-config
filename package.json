@@ -2,14 +2,12 @@
   "name": "gfc-vault-config",
   "version": "1.3.0",
   "description": "Centralized config schema to allow for reusability of config values across various GFC projects.",
-  "main": "src/index.ts",
+  "main": "lib/index",
+  "typings": "lib/index",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "start": "ts-node src/index.ts",
-    "build": "tsc",
-    "lint": "eslint .",
-    "release": "release-it",
-    "release-dry": "release-it --dry-run"
+    "build": "tsc -p .",
+    "build:watch": "npm run build -- -w",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,16 +18,18 @@
   "homepage": "https://github.com/GitFitCode/gfc-vault-config#readme",
   "dependencies": {
     "convict": "latest",
-    "dotenv": "latest"
+    "dotenv": "latest",
+    "typestyle": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@release-it/conventional-changelog": "latest",
-    "@types/convict": "latest",
+    "@types/convict": "^6.1.1",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "convict": "latest",
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-airbnb-typescript": "latest",
