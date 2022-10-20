@@ -4,6 +4,33 @@ import dotEnv = require('dotenv');
 
 dotEnv.config();
 
+export interface Config {
+  env: string;
+  discordBotToken: string;
+  botId: string;
+  gfcIntroSurveyLink: string;
+  admin1DiscordId: string;
+  admin2DiscordId: string;
+  generalChatChannelId: string;
+  checkinsVoiceChannelId: string;
+  notionBacklogDatabaseLink: string;
+  virtualOfficeVoiceChannelId: string;
+  firstRespondersRoleId: string;
+  notionKey: string;
+  notionSupportTicketsDatabaseId: string;
+  notionSupportTicketsDatabaseStatusId: string;
+  notionSupportTicketsDatabaseLink: string;
+  githubPersonalAccessToken: string;
+  limitMaxConcurrent: string;
+  logLevel: string;
+  port: string;
+  discordServerID: string;
+  notionRetroDatabaseId: string;
+  sentryDSN: string;
+  adminRoleID: string;
+  notionBacklogDatabaseId: string;
+}
+
 export type ConfigurationSchema = {
   env: {
     format: string[] | string;
@@ -151,39 +178,7 @@ export type ConfigurationSchema = {
   };
 } & convict.SchemaObj<Config>;
 
-export interface Config {
-  env: string;
-  discordBotToken: string;
-  botId: string;
-  gfcIntroSurveyLink: string;
-  admin1DiscordId: string;
-  admin2DiscordId: string;
-  generalChatChannelId: string;
-  checkinsVoiceChannelId: string;
-  notionBacklogDatabaseLink: string;
-  virtualOfficeVoiceChannelId: string;
-  firstRespondersRoleId: string;
-  notionKey: string;
-  notionSupportTicketsDatabaseId: string;
-  notionSupportTicketsDatabaseStatusId: string;
-  notionSupportTicketsDatabaseLink: string;
-  githubPersonalAccessToken: string;
-  limitMaxConcurrent: string;
-  logLevel: string;
-  port: string;
-  discordServerID: string;
-  notionRetroDatabaseId: string;
-  sentryDSN: string;
-  adminRoleID: string;
-  notionBacklogDatabaseId: string;
-}
-
-export type LibraryConfiguration =
-  | ConfigurationSchema
-  | Config
-  | convict.SchemaObj<ConfigurationSchema>;
-
-const configuration: LibraryConfiguration | convict.Config<Config> = convict({
+const configuration: convict.Config<Config> | ConfigurationSchema = convict({
   env: {
     format: ['prod', 'dev', 'staging', 'qa', 'local', 'ci'],
     default: 'dev',
@@ -336,4 +331,8 @@ configuration.validate({
 });
 
 // Convict object has a lot going on so lets just get a simple js object instead.
-export const config = configuration.getProperties();
+export function getConfig(): Config {
+  return configuration.getProperties();
+}
+
+export const config = getConfig();

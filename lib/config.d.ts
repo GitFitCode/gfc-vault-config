@@ -1,4 +1,30 @@
 import convict = require('convict');
+export interface Config {
+    env: string;
+    discordBotToken: string;
+    botId: string;
+    gfcIntroSurveyLink: string;
+    admin1DiscordId: string;
+    admin2DiscordId: string;
+    generalChatChannelId: string;
+    checkinsVoiceChannelId: string;
+    notionBacklogDatabaseLink: string;
+    virtualOfficeVoiceChannelId: string;
+    firstRespondersRoleId: string;
+    notionKey: string;
+    notionSupportTicketsDatabaseId: string;
+    notionSupportTicketsDatabaseStatusId: string;
+    notionSupportTicketsDatabaseLink: string;
+    githubPersonalAccessToken: string;
+    limitMaxConcurrent: string;
+    logLevel: string;
+    port: string;
+    discordServerID: string;
+    notionRetroDatabaseId: string;
+    sentryDSN: string;
+    adminRoleID: string;
+    notionBacklogDatabaseId: string;
+}
 export declare type ConfigurationSchema = {
     env: {
         format: string[] | string;
@@ -145,32 +171,6 @@ export declare type ConfigurationSchema = {
         arg: string;
     };
 } & convict.SchemaObj<Config>;
-export interface Config {
-    env: string;
-    discordBotToken: string;
-    botId: string;
-    gfcIntroSurveyLink: string;
-    admin1DiscordId: string;
-    admin2DiscordId: string;
-    generalChatChannelId: string;
-    checkinsVoiceChannelId: string;
-    notionBacklogDatabaseLink: string;
-    virtualOfficeVoiceChannelId: string;
-    firstRespondersRoleId: string;
-    notionKey: string;
-    notionSupportTicketsDatabaseId: string;
-    notionSupportTicketsDatabaseStatusId: string;
-    notionSupportTicketsDatabaseLink: string;
-    githubPersonalAccessToken: string;
-    limitMaxConcurrent: string;
-    logLevel: string;
-    port: string;
-    discordServerID: string;
-    notionRetroDatabaseId: string;
-    sentryDSN: string;
-    adminRoleID: string;
-    notionBacklogDatabaseId: string;
-}
-export declare type LibraryConfiguration = ConfigurationSchema | Config | convict.SchemaObj<ConfigurationSchema>;
+export declare function getConfig(): Config;
 export declare const config: Config;
 //# sourceMappingURL=config.d.ts.map
