@@ -19,13 +19,13 @@
   "dependencies": {
     "convict": "latest",
     "dotenv": "latest",
-    "typestyle": "^2.4.0"
+    "typestyle": "latest"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@release-it/conventional-changelog": "latest",
-    "@types/convict": "^6.1.1",
+    "@types/convict": "latest",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
