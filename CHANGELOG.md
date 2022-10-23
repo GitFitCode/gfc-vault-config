@@ -1,5 +1,18 @@
 
 
+# [1.4.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.3.0...v1.4.0) (2022-10-23)
+
+
+### Bug Fixes
+
+* added back release scripts to package.json ([1b594bf](https://github.com/GitFitCode/gfc-vault-config/commit/1b594bf36ae29517e861cf91da18f447755f75f0))
+
+
+### Features
+
+* added type definition to config ([bc8dabe](https://github.com/GitFitCode/gfc-vault-config/commit/bc8dabe3c5ae0c761c7c40931ede662e75c144e3))
+* properly added types ([b8345f5](https://github.com/GitFitCode/gfc-vault-config/commit/b8345f556db868865f0828f5389d8d66b84bd287))
+
 # [1.3.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.2.0...v1.3.0) (2022-10-11)
 
 
