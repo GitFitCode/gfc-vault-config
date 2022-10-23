@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc -p .",
     "build:watch": "npm run build -- -w",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "release": "release-it",
+    "release-dry": "release-it --dry-run"
   },
   "repository": {
     "type": "git",
