@@ -171,6 +171,12 @@ export declare type ConfigurationSchema = {
         env: string;
         arg: string;
     };
+    openAIApiKey: {
+        format: string;
+        default: string;
+        env: string;
+        arg: string;
+    };
 } & convict.SchemaObj<Config>;
 export declare function getConfig(): Config;
 export declare const config: Config;
