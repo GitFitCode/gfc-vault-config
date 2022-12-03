@@ -177,6 +177,12 @@ export type ConfigurationSchema = {
     env: string;
     arg: string;
   };
+  openAIApiKey: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  }
 } & convict.SchemaObj<Config>;
 
 const configuration: convict.Config<Config> | ConfigurationSchema = convict({
