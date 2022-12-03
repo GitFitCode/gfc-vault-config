@@ -24,6 +24,7 @@ export interface Config {
     sentryDSN: string;
     adminRoleID: string;
     notionBacklogDatabaseId: string;
+    openAIApiKey: string;
 }
 export declare type ConfigurationSchema = {
     env: {

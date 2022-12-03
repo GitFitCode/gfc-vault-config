@@ -29,6 +29,7 @@ export interface Config {
   sentryDSN: string;
   adminRoleID: string;
   notionBacklogDatabaseId: string;
+  openAIApiKey: string;
 }
 
 export type ConfigurationSchema = {
@@ -322,6 +323,12 @@ const configuration: convict.Config<Config> | ConfigurationSchema = convict({
     default: 'from default',
     arg: 'notionBacklogDatabaseLink',
     env: 'NOTION_BACKLOG_DATABASE_LINK',
+  },
+  openAIApiKey: {
+    format: String,
+    default: 'from default',
+    arg: 'openAIApiKey',
+    env: 'OPENAI_API_KEY',
   },
 });
 
