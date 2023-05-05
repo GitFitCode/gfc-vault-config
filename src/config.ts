@@ -30,6 +30,8 @@ export interface Config {
   adminRoleID: string;
   notionBacklogDatabaseId: string;
   openAIApiKey: string;
+  supabaseURL: string;
+  supabaseAnonKey: string;
 }
 
 export type ConfigurationSchema = {
@@ -182,7 +184,19 @@ export type ConfigurationSchema = {
     default: string;
     env: string;
     arg: string;
-  }
+  };
+  supabaseURL: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
+  supabaseAnonKey: {
+    format: string;
+    default: string;
+    env: string;
+    arg: string;
+  };
 } & convict.SchemaObj<Config>;
 
 const configuration: convict.Config<Config> | ConfigurationSchema = convict({
@@ -335,6 +349,18 @@ const configuration: convict.Config<Config> | ConfigurationSchema = convict({
     default: 'from default',
     arg: 'openAIApiKey',
     env: 'OPENAI_API_KEY',
+  },
+  supabaseURL: {
+    format: String,
+    default: 'from default',
+    arg: 'supabaseURL',
+    env: 'SUPABASE_URL',
+  },
+  supabaseAnonKey: {
+    format: String,
+    default: 'from default',
+    arg: 'supabaseAnonKey',
+    env: 'SUPABASE_ANON_KEY',
   },
 });
 

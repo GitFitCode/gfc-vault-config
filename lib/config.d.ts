@@ -25,8 +25,10 @@ export interface Config {
     adminRoleID: string;
     notionBacklogDatabaseId: string;
     openAIApiKey: string;
+    supabaseURL: string;
+    supabaseAnonKey: string;
 }
-export declare type ConfigurationSchema = {
+export type ConfigurationSchema = {
     env: {
         format: string[] | string;
         default: string;
@@ -172,6 +174,18 @@ export declare type ConfigurationSchema = {
         arg: string;
     };
     openAIApiKey: {
+        format: string;
+        default: string;
+        env: string;
+        arg: string;
+    };
+    supabaseURL: {
+        format: string;
+        default: string;
+        env: string;
+        arg: string;
+    };
+    supabaseAnonKey: {
         format: string;
         default: string;
         env: string;
