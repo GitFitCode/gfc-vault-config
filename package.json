@@ -1,6 +1,6 @@
 {
   "name": "gfc-vault-config",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Centralized config schema to allow for reusability of config values across various GFC projects.",
   "main": "lib/index",
   "types": "lib/index",

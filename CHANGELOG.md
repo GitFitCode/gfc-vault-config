@@ -1,5 +1,15 @@
 
 
+# [1.5.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.4.0...v1.5.0) (2023-05-05)
+
+
+### Features
+
+* added supabase config ([1321eb9](https://github.com/GitFitCode/gfc-vault-config/commit/1321eb9953b5549693e2e8c56347ee886e1c1b01))
+* added the open AI api key ([8e59d4e](https://github.com/GitFitCode/gfc-vault-config/commit/8e59d4eefbbd0786fb70c889c92ec06f66de9870))
+* adding built config ([1c18bc7](https://github.com/GitFitCode/gfc-vault-config/commit/1c18bc7c8ab2837171d2af942144b40dd14218c4))
+* updated the config schema ([1b78a05](https://github.com/GitFitCode/gfc-vault-config/commit/1b78a052b7773698511c5ab14a54a5064148f2e6))
+
 # [1.4.0](https://github.com/GitFitCode/gfc-vault-config/compare/v1.3.0...v1.4.0) (2022-10-23)
 
 
